@@ -5,61 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/style.css" />
+    <title>JavaScript Quiz</title>
   </head>
   <body>
     <!--Group title, start button, and rules in one div (h1, p, button)-->
    
     <section id="start-page">
-        <div class="quiz-container"></div>
-    <title>JavaScript Quiz</title>
+        <div class="start-container"></div>
+    <p>Test your JavaScript!</p>
     <div><button id="Begin">Start Quiz</button></div>
-
-    <div id="questions-container class="hide">
-    <div class="questionsDiv" id="question-group1">
-      <h3 id="question1">Question 1</h3>
-      <div id="answer-btn1" class="answer-btn-grid">
-        <button class="q1btn" value="true">Answer 1</button>
-        <button class="q1btn">Answer 2</button>
-        <button class="q1btn">Answer 3</button>
-        <button class="q1btn">Answer 4</button>
-      </div>
-    </div>
     </section>
 
 
-    <div class="questionsDiv" id="question-group1">
-        <h3 id="question1">Question 1</h3> 
-        <div id="answer-btn1" class="answer-btn-grid">
-          <button class="q1btn" value="true">Answer 1</button>
-          <button class="q1btn">Answer 2</button>
-          <button class="q1btn">Answer 3</button>
-          <button class="q1btn">Answer 4</button>
-        </div>
-      </div>
+    <div class="questions-container">
+      <h1 id="question"> </h1>
+      <p class="answers"></p>
+    </div>
+    
+<div id="end-quiz" class="hidden"></div>
+<h2>Finished!</h2>
+<p>score: <span id="score"></span></p>
 
 
+<form id="initials">
+  <label for="initials"
+    >Type your initials:</label>
+  
+  <input
+    type="text"
+    placeholder="initials"
+    id="input"
+    name="initials"
+  /><br />
+  <input type="submit" value="Submit" />
+</form>
 
-      <div class="questionsDiv" id="question-group1">
-        <h3 id="question1">Question 1</h3>
-        <div id="answer-btn1" class="answer-btn-grid">
-          <button class="q1btn" value="true">Answer 1</button>
-          <button class="q1btn">Answer 2</button>
-          <button class="q1btn">Answer 3</button>
-          <button class="q1btn">Answer 4</button>
-        </div>
-      </div>
-
-
-
-      <div class="questionsDiv" id="question-group1">
-        <h3 id="question1">Question 1</h3>
-        <div id="answer-btn1" class="answer-btn-grid">
-          <button class="q1btn" value="true">Answer 1</button>
-          <button class="q1btn">Answer 2</button>
-          <button class="q1btn">Answer 3</button>
-          <button class="q1btn">Answer 4</button>
-        </div>
-      </div>
+<span class="scores-list"></span>
 
     <script src="script.js"></script>
   </body>

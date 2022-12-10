@@ -1,7 +1,7 @@
 var questionEl = document.getElementById("question");
 var currentIndex = 0
 var startButton = document.querySelector("#Begin");
-var startPage = document.querySelector("#start-page");
+var questionsContainer = document.querySelector("#questions-container");
 
 
 
@@ -24,30 +24,8 @@ var questions = [
 ]
 function beginQuiz(){
     // startTimer();
-startPage.setAttribute("class", "hidden");
+questionsContainer.setAttribute("class", "hidden");
 }
-
-// function getQuestion() {
-//     var currentQuestion= questions[currentIndex]
-//     questionEl.textContent = currentQuestion.question
-
-
-//     for (let i = 0; i < currentQuestion.choices.length; i++) {
-      
-//         var answer= currentQuestion.choices[i]
-//         console.log (answer)
-//         var button= document.createElement('button')
-//         button.textContent = 
-//         var questionBox= document.getElementById("question-container")
-//         questionBox.appendChild(button)
-//     }
-
-
-
-
-// }
-
-// getQuestion() 
 
 startButton.addEventListener("click", beginQuiz);
 
