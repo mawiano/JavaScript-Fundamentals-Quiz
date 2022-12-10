@@ -9,24 +9,29 @@
   </head>
   <body>
     <!--Group title, start button, and rules in one div (h1, p, button)-->
-   
+    <!-- Added timer -->
+    <div class="timer"></div>
+
+<!-- Start page -->
     <section id="start-page">
         <div class="start-container"></div>
     <p>Test your JavaScript!</p>
-    <div><button id="Begin">Start Quiz</button></div>
+    <section>Welcome to the Quiz! You will be given 4 questions and 60 seconds to complete this quiz. You will lose time on each incorrect answer.</section>
+    <div><button id="Begin-button">Start Quiz</button></div>
     </section>
 
-
+<!-- My questions and answers container -->
     <div class="questions-container">
       <h1 id="question"> </h1>
       <p class="answers"></p>
     </div>
     
+    <!-- Last page -->
 <div id="end-quiz" class="hidden"></div>
 <h2>Finished!</h2>
 <p>score: <span id="score"></span></p>
 
-
+<!-- Initials form -->
 <form id="initials">
   <label for="initials"
     >Type your initials:</label>
@@ -40,6 +45,7 @@
   <input type="submit" value="Submit" />
 </form>
 
+<!-- Final scores list -->
 <span class="scores-list"></span>
 
     <script src="script.js"></script>
