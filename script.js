@@ -1,7 +1,7 @@
 var questionEl = document.querySelector("#question");
 var currentIndex = 0
 var startButton = document.querySelector("#Begin-button");
-var questionsContainer = document.querySelector("#questions-container");
+var questionsContainer = document.querySelector(".questions-container");
 var startPage = document.querySelector("#start-page");
 var timer = document.querySelector(".timer")
 var timeRemaining= 60;
@@ -11,7 +11,7 @@ var quizQA = [
     {
     question: "Which is a JavaScript Data Type?",
     options: ["Number", "String", "Boolean", "All of the Above"],
-    correctChoice: "All of the above"
+    correctChoice: "All of the Above"
 },
 {
     question: "When was JavaScript created?",
@@ -32,6 +32,8 @@ var quizQA = [
 function beginQuiz(){
     startTimer();
 startPage.setAttribute("class", "hidden");
+questionsContainer.classList.remove("hidden");
+displayQuestion();
 }
 
 function startTimer(){
@@ -49,13 +51,38 @@ function startTimer(){
     }, 1000);
 }
 
+// Function to Display the questions and answer choices.
+function displayQuestion(){
+    var currentQuestion= quizQA[currentIndex];
+    var title= currentQuestion.question;
+    var choices= currentQuestion.options; 
+    var correctAnswer= currentQuestion.correctChoice;
 
-function displayQuestion(questionIndex){
-    questionEl.textContent= quizQA[questionIndex].question;
-questionsContainer.append(questionEl);
-answerEl.textContent= "";
-for (var i=0; i<quizQA[questionIndex].options.length; i++){
-    
+    questionEl.textContent= title;
+// Looping through the array of questions 
+answerEl.innerHTML= "";
+for (var i=0; i<choices.length; i++){
+    var listElement= document.createElement("li");
+    var choice= choices[i];
+    listElement.textContent= choice;
+    if (choice=== correctAnswer){
+        listElement.dataset.correctAnswer= true; 
+    }else {
+        listElement.dataset.correctAnswer= false;
+    }
+// 
+listElement.addEventListener("click", function(event){
+event.preventDefault();
+var currentchoice = event.target 
+console.log(currentchoice)
+currentIndex++ 
+displayQuestion()
+})
+
+
+
+
+    answerEl.appendChild(listElement);
 }
 }
 

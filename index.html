@@ -21,18 +21,18 @@
     </section>
 
 <!-- My questions and answers container -->
-    <div class="questions-container">
+    <div class="questions-container hidden">
       <h1 id="question"> </h1>
-      <p class="answers"></p>
+      <ul class="answers"></ul>
     </div>
     
     <!-- Last page -->
-<div id="end-quiz" class="hidden"></div>
+<div id="end-quiz" class="hidden">
 <h2>Finished!</h2>
 <p>score: <span id="score"></span></p>
-
+</div>
 <!-- Initials form -->
-<form id="initials">
+<form id="initials" class="hidden">
   <label for="initials"
     >Type your initials:</label>
   
@@ -46,7 +46,7 @@
 </form>
 
 <!-- Final scores list -->
-<span class="scores-list"></span>
+<span class="scores-list hidden"></span>
 
     <script src="script.js"></script>
   </body>
